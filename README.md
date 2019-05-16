@@ -3,7 +3,7 @@
 This repo contains live-build files and scripts to create an custom Debian 9
 ISO and image for deploying on SmartOS and Smart Data Center.
 
-For more information on live-build see the [live-build manual](http://live.debian.net/manual/current/index.en.html)
+For more information on live-build see the [live-build manual](https://live-team.pages.debian.net/live-manual/html/live-manual/index.en.html)
 
 ## Requirements
 
@@ -17,8 +17,9 @@ In order to use this repo, you need to have the following:
 
 Clone the repo and build the package:
 ```
-git clone git://live-systems.org/git/live-build.git
+git clone https://salsa.debian.org/live-team/live-build.git
 cd live-build
+git reset --hard debian/1%20190311
 dpkg-buildpackage -b -uc -us
 cd ..
 ```
@@ -26,12 +27,12 @@ cd ..
 Then install the newly build *deb file:
 
 ```
-dpkg -i live-build_5.0~a8-1_all.deb
+dpkg -i live-build_20190311_all.deb
 ```
 
 ## Configure
 
-Modify the scripts in `auto\` and `config` depending on how you want your ISO configured. See the [live-build manual](http://live-systems.org/manual/stable/html/live-manual.en.html) for more information.
+Modify the scripts in `auto\` and `config` depending on how you want your ISO configured. See the [live-build manual](https://live-team.pages.debian.net/live-manual/html/live-manual/index.en.html) for more information.
 
 
 ## Usage
